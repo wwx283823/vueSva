@@ -36,7 +36,10 @@ export default new Router({
       path: '/paramConfig',
       component: paramConfig
     },
-    ,
+    {
+      path: '/',
+      component: mapConfig
+    },
     {
       path: '/mapConfig',
       component: mapConfig

@@ -1,9 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <!--<img src="./assets/logo.png">
     <h1>{{msg}}</h1>-->
-    <firstcomponent></firstcomponent>
-    <hello></hello>
+    <!--<wrapper></wrapper>-->
+    <!--<firstcomponent></firstcomponent>-->
+    <!--<hello></hello>-->
+    <menu-id></menu-id>
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
   </div>
@@ -14,6 +16,7 @@
 <script>
   import firstcomponent from './components/FirstComponent.vue'
   import hello from './components/HelloWorld.vue'
+  import menuId from './components/Menu.vue'
   import axios from 'axios'
   export default {
     name: 'app',
@@ -22,7 +25,7 @@
         msg: 'Welcome to Your Vue.js App'
       }
     },
-    components: {firstcomponent,hello},
+    components: {firstcomponent,hello,menuId},
     methods:{
       get(){
         axios.get('/api/hperfdef1').

@@ -15,6 +15,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 //Vue.component('icon', Icon) //注册
 import 'vue-easytable/libs/themes-base/index.css'
+import 'font-awesome/css/font-awesome.css'
 
 // 导入组件
 import {VTable,VPagination} from 'vue-easytable'
@@ -23,6 +24,8 @@ import {VTable,VPagination} from 'vue-easytable'
 Vue.component(VTable.name, VTable)
 // Vue.component(VPagination.name, VPagination)
 import echarts from 'echarts'
+import Raphael from 'raphael'
+
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 

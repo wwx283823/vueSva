@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 ">
-          <img src="../../static/images/title.png"/>
+
         </div>
       </div>
       <div class="row"style="margin-left: 1.3%;">
@@ -17,19 +17,22 @@
         <!--</div>-->
       <!--</div>-->
       <div class="row" style="    margin-top: 15px;">
-        <router-link class="routerClass" to="/warn">痛点指标告警 |</router-link>
-        <router-link class="routerClass" to="/bigTalk/16">大话务保障 |</router-link>
-        <router-link class="routerClass" to="/paramConfig">AI参数优化 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">智能分析系统 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">集中分析 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">集中参数 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">集中投诉 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">空分管控 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">实时监控 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">专项分析 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">通用警务 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">功能管理统计 |</router-link>
-        <router-link class="routerClass myRouter" to="/view3">系统管理</router-link>
+        <router-link class="routerClass" to="/mapConfig">地图配置 |</router-link>
+        <router-link class="routerClass" to="/bigTalk/16">售前可视化 |</router-link>
+        <router-link class="routerClass" to="/paramConfig">售后可视化</router-link>
+        <!--<router-link class="routerClass" to="/warn">痛点指标告警 |</router-link>-->
+        <!--<router-link class="routerClass" to="/bigTalk/16">大话务保障 |</router-link>-->
+        <!--<router-link class="routerClass" to="/paramConfig">AI参数优化 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">智能分析系统 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">集中分析 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">集中参数 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">集中投诉 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">空分管控 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">实时监控 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">专项分析 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">通用警务 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">功能管理统计 |</router-link>-->
+        <!--<router-link class="routerClass myRouter" to="/view3">系统管理</router-link>-->
         <router-view/>
       </div>
 
@@ -88,58 +91,6 @@
       nowTimes(){
         this.timeFormate(new Date());
         setTimeout(this.nowTimes,1000);
-      },
-      getHistoryBySva(){
-        let _this = this;
-        axios.get('/api/getHistoryBySva').
-        then(function(response){
-//          let resultData = response.data;
-//          console.log(resultData);
-//          console.log("sva sub record:"+resultData);
-        }).catch(function(err){
-          console.log(err);
-        });
-//        _this.subHperf();
-      },
-      subHperf(){
-        let _this = this;
-        axios.get('/api/subHperf').
-        then(function(response){
-          let resultData = response.data;
-          console.log("sva sub:"+resultData);
-        }).catch(function(err){
-          console.log(err);
-        });
-      },
-      getData(){
-        if(this.myTimes!=null){
-          clearTimeout(this.myTimes);
-        }
-        let _this = this;
-        axios.get('/api/getData').
-        then(function(response){
-          let resultData = response.data;
-          console.log("getData:"+resultData)
-          if(resultData==false){
-            _this.subHperf();
-          }
-//          _this.getHistoryBySva();
-        }).catch(function(err){
-          console.log(err);
-        });
-        _this.myTimes = setTimeout(function()  {
-          _this.getData();
-        }, 5000);
-      },
-      reflushHistory(){
-        if(this.myTimes2!=null){
-          clearTimeout(this.myTimes2);
-        }
-        this.getHistoryBySva();
-        let _this = this;
-        _this.myTimes2 = setTimeout(function()  {
-          _this.reflushHistory();
-        }, 30000);
       }
     },
     //创建完成时调用
@@ -147,12 +98,7 @@
       this.nowTimes();
     },
    mounted(){
-     this.getHistoryBySva();
-     this.subHperf();
-     setTimeout(() => {
-       this.getData();
-       this.reflushHistory();
-     }, 10000)
+
    }
   }
 </script>

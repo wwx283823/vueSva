@@ -54,7 +54,7 @@
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
-  <router-link class="routerClass myRouter" to="/view2">集中分析2 |</router-link>
+  <router-link class="routerClass myRouter" to="/view2"><i class="fa fa-desktop"/>集中分析</router-link>
   <router-link class="routerClass myRouter" to="/view1">集中分析1 |</router-link>
   <router-view/>
   　　</div>
