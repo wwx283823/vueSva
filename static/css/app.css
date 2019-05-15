@@ -1,0 +1,114 @@
+.routerClass{
+  color: #6DFDFD;
+  font-size: 22px;
+}
+.bodyHtmlLabel{
+  color: white;
+  font-size: 18px;
+}
+.bodyHtmlInput{
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px 4px;
+}
+.bigTalkInput{
+  width: 65px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px 4px;
+}
+.bodyHtmlLabelR{
+  writing-mode: tb;
+  font-size: 25px;
+  color: white;
+  float: right;
+}
+.topR{
+  margin-top: 35px;
+}
+.timeClass{
+  color: white;
+  font-size: 18px;
+  margin-top: -55px;
+  /* margin-left: 1px; */
+  text-align: left;
+}
+.titleCell{
+  background-color: red;
+  color:#fff;
+}
+.bigTalkSelect{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 0px 8px;
+}
+.myRouter{
+  pointer-events: none;
+  opacity: 0.2;
+}
+.paramLabel{
+  color: #6DFDFD;
+  font-size: 18px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.paramLabel2{
+  /*color: aqua;*/
+  font-size: 18px;
+  /*margin-top: -30px;*/
+  /*margin-bottom: 20px;*/
+}
+.paramDiv{
+  /*border-top: 3px solid #fdb425;*/
+  /*border-left: 3px solid #fdb425;*/
+  margin-left: 5%;
+  border: 3px solid #6DFDFD;
+  background-color: rgba(0,0,0,0.5);
+}
+.paramButton{
+  margin-left: 5%;
+  /* margin-right: -107%; */
+  width: 88.35%;
+  border: 3px solid #fdb425;
+}
+.paramMyButton{
+  margin-top: 35px;
+  width: 150px;
+  border-bottom-color: #6DFDFD;
+  color: black;
+  /*margin-bottom: 10px;*/
+}
+
+.column-cell-class-name-test{
+  background-color: #253952;
+  color:white;
+  font-size: 17px;
+  /*background-color: transparent;*/
+}
+.v-table-title-cell{
+  border-color:#6DFDFD;;
+}
+.v-table-views{
+  border: 1px solid #6DFDFD;
+}
+.v-table-header-row{
+  background-color: #253952;
+  color: #6DFDFD;
+}
+.column-cell-class-name-test .v-table-body-cell {
+  /*background-color: transparent !important;*/
+}
+.column-cell-class-name-test .v-table-title-cell .vertical-border {
+
+}
+.historyDiv{
+ margin-left: 4.4%; width: 89.35%; border: 3px solid rgb(253, 180, 37);padding-bottom: 25px;
+}
+.divMargin{
+  margin-left: -55px;
+}
+.v-table-empty-inner {
+  background-color: #253952;
+  color: #6DFDFD;
+}

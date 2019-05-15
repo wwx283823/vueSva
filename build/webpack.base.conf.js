@@ -8,16 +8,7 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-const createLintingRule = () => ({
-  test: /\.(js|vue)$/,
-  loader: 'eslint-loader',
-  enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
-  options: {
-    formatter: require('eslint-friendly-formatter'),
-    emitWarning: !config.dev.showEslintErrorsInOverlay
-  }
-})
+const webpack = require("webpack");
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -36,11 +27,20 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'jquery': path.resolve(__dirname,'../node_modules/jquery/src/jquery')
     }
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common'),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      Popper: ['popper.js', 'default']
+    })
+  ],
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
