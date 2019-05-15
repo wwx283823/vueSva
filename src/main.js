@@ -8,6 +8,7 @@ import $ from 'jquery'
 import '../node_modules/popper.js/dist/umd/popper.min.js'
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
 // import axios from 'axios'
 // Vue.prototype.$http=axios
 // 导入 css
@@ -16,6 +17,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 //Vue.component('icon', Icon) //注册
 import 'vue-easytable/libs/themes-base/index.css'
 import 'font-awesome/css/font-awesome.css'
+import '../static/css/custom-styles.css'
 
 // 导入组件
 import {VTable,VPagination} from 'vue-easytable'
