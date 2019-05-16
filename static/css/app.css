@@ -112,3 +112,10 @@
   background-color: #253952;
   color: #6DFDFD;
 }
+.cell-edit-color{
+  color:#6DFDFD;
+  font-weight: bold;
+}
+.cell-edit-input{
+  color:#6DFDFD;
+}

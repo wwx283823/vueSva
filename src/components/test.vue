@@ -224,7 +224,12 @@
   <nav class="navbar-default navbar-side" role="navigation">
     <div class="sidebar-collapse">
       <ul class="nav" id="main-menu">
-
+        <li>
+          <a><i class="fa fa-dashboard"></i><router-link style="color: #FFFFFF;background: transparent;text-shadow: none;"  to="/siteConfig">站点配置</router-link></a>
+        </li>
+        <li>
+          <a><i class="fa fa-dashboard"></i><router-link style="color: #FFFFFF;background: transparent;text-shadow: none;"  to="/svaConfig">SVA配置</router-link></a>
+        </li>
         <li>
           <a><i class="fa fa-dashboard"></i><router-link style="color: #FFFFFF;background: transparent;text-shadow: none;"  to="/mapConfig">地图配置</router-link></a>
         </li>

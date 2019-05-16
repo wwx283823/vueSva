@@ -5,6 +5,7 @@
     <!--<wrapper></wrapper>-->
     <!--<firstcomponent></firstcomponent>-->
     <!--<hello></hello>-->
+    <!--<router-view v-if="isRouterAlive"></router-view>-->
     <wrapper></wrapper>
     <!--<menu-id></menu-id>-->
     <!-- 路由出口 -->
@@ -19,26 +20,25 @@
   import hello from './components/HelloWorld.vue'
   import wrapper from './components/test.vue'
   import menuId from './components/Menu.vue'
-  import axios from 'axios'
   export default {
     name: 'app',
+//    provide(){
+//      return this.reload
+//    },
     data () {
       return {
         msg: 'Welcome to Your Vue.js App'
       }
     },
     components: {firstcomponent,hello,menuId,wrapper},
-    methods:{
-      get(){
-        axios.get('/api/hperfdef1').
-        then(function(response){
-          console.log(response);
-        }).catch(function(err){
-          console.log(err);
-        });
-
-      }
-    }
+//    methods:{
+//        reload(){
+//          this.isRouterAlive = false;
+//          this.$nextTick(function () {
+//            this.isRouterAlive = true;
+//          })
+//        }
+//    }
   }
 </script>
 

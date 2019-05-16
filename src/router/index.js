@@ -8,6 +8,8 @@ import warn from '@/views/WarnPain.vue'
 import bigTalk from '@/views/BigTalk.vue'
 import paramConfig from '@/views/ParamConfig.vue'
 import mapConfig from '@/views/MapConfig.vue'
+import siteConfig from '@/views/SiteConfig.vue'
+import svaConfig from '@/views/SvaConfig.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -43,10 +45,14 @@ export default new Router({
     {
       path: '/mapConfig',
       component: mapConfig
+    },
+    {
+      path: '/siteConfig',
+      component: siteConfig
+    },
+    {
+      path: '/svaConfig',
+      component: svaConfig
     }
-    //  {
-    //   path: '/menu',
-    //   component: menu
-    // }
   ]
 })
